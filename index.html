@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NFL Draft Friends League</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+
+            <button class="brand" id="brandButton" type="button">
+                <span class="brand-icon">🏈</span>
+
+                <span class="brand-text">
+                    <span class="brand-small">NFL DRAFT</span>
+                    <span class="brand-large">FRIENDS LEAGUE</span>
+                </span>
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+
+                <button
+                    class="nav-button active"
+                    type="button"
+                    data-section="leaderboard"
+                >
+                    Leaderboard
+                </button>
+
+                <button
+                    class="nav-button"
+                    type="button"
+                    data-section="teams"
+                >
+                    Drafted Teams
+                </button>
+
+                <button
+                    class="nav-button"
+                    type="button"
+                    data-section="manage"
+                >
+                    Manage Points
+                </button>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="site-main">
+
+        <!-- LEADERBOARD -->
+        <section
+            id="leaderboard"
+            class="page-section active-section"
+        >
+            <div class="page-container">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">2026 NFL SEASON</p>
+                        <h1>Leaderboard</h1>
+                        <p class="heading-description">
+                            Track every point earned throughout the season.
+                        </p>
+                    </div>
+
+                    <div class="season-badge">
+                        2026
+                    </div>
+                </div>
+
+
+                <div class="leaderboard-card">
+
+                    <div class="leaderboard-header">
+                        <div>POS</div>
+                        <div>PLAYER</div>
+                        <div class="points-heading">POINTS</div>
+                    </div>
+
+                    <div id="leaderboardRows"></div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- DRAFTED TEAMS -->
+        <section
+            id="teams"
+            class="page-section"
+        >
+            <div class="page-container">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">THE DRAFT</p>
+                        <h1>Drafted Teams</h1>
+                        <p class="heading-description">
+                            See which NFL teams belong to each player.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div
+                    id="teamsGrid"
+                    class="teams-grid"
+                ></div>
+
+            </div>
+        </section>
+
+
+        <!-- MANAGE POINTS -->
+        <section
+            id="manage"
+            class="page-section"
+        >
+            <div class="page-container">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">COMMISSIONER</p>
+                        <h1>Manage Points</h1>
+                        <p class="heading-description">
+                            Add or remove points from each player's total.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="manage-intro">
+                    <span class="manage-icon">⚙️</span>
+
+                    <div>
+                        <strong>Commissioner controls</strong>
+
+                        <p>
+                            Add one point whenever one of a player's drafted
+                            teams wins an NFL game.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div
+                    id="managePlayers"
+                    class="manage-players"
+                ></div>
+
+
+                <div class="reset-area">
+
+                    <button
+                        id="resetButton"
+                        class="reset-button"
+                        type="button"
+                    >
+                        Reset All Points
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span>NFL DRAFT FRIENDS LEAGUE</span>
+            <span>2026 SEASON</span>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
